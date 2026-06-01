@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+@plugin 'daisyui' {
+  themes: light, dark, business, corporate, dracula;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'saidr';
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --saidr-surface-raised: #191919;
+  --saidr-surface: #1c1c1c;
+  --saidr-border: #18181800;
+  --saidr-ink: #cdcdcd;
+  --saidr-muted: #7c909a;
+  --saidr-primary: #1c4e80;
+  --saidr-primary-content: #d0dae5;
+  --saidr-secondary: #7c909a;
+  --saidr-secondary-content: #050708;
+  --saidr-accent: #ea6947;
+  --saidr-accent-content: #130402;
+  --saidr-neutral: #23282e;
+  --saidr-neutral-content: #cecfd0;
+  --saidr-info: #0291d5;
+  --saidr-info-content: #000710;
+  --saidr-success: #6bb187;
+  --saidr-success-content: #040b07;
+  --saidr-warning: #dbae5a;
+  --saidr-warning-content: #110b03;
+  --saidr-error: #ac3e31;
+  --saidr-error-content: #f2d8d4;
+
+  --color-base-100: var(--saidr-surface-raised);
+  --color-base-200: var(--saidr-surface);
+  --color-base-300: var(--saidr-border);
+  --color-base-content: var(--saidr-ink);
+  --color-primary: var(--saidr-primary);
+  --color-primary-content: var(--saidr-primary-content);
+  --color-secondary: var(--saidr-secondary);
+  --color-secondary-content: var(--saidr-secondary-content);
+  --color-accent: var(--saidr-accent);
+  --color-accent-content: var(--saidr-accent-content);
+  --color-neutral: var(--saidr-neutral);
+  --color-neutral-content: var(--saidr-neutral-content);
+  --color-info: var(--saidr-info);
+  --color-info-content: var(--saidr-info-content);
+  --color-success: var(--saidr-success);
+  --color-success-content: var(--saidr-success-content);
+  --color-warning: var(--saidr-warning);
+  --color-warning-content: var(--saidr-warning-content);
+  --color-error: var(--saidr-error);
+  --color-error-content: var(--saidr-error-content);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 0px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@layer base {
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none !important;
+  }
+}
+
+html,
+body,
+#app {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+.input, .select, .textarea {
+  background-color: var(--color-base-200);
+}
+
+.settings-prompts {
+  .input, .select, .textarea {
+    background-color: var(--color-base-100);
+  }
+
+  .new-prompt-form {
+    border-top: 2px dashed #353535;
+    padding-top: 20px;
+    margin-top: 15px;
+
+    .input, .select, .textarea {
+      background-color: var(--color-base-200);
+    }
+  }
+}
